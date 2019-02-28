@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+    <div style="margin: 50px auto; width: 800px;">
+      <h1>Test</h1>
+      <p class="code-switcher python">
+        This tutorial shows how to make something in Python
+      </p>
+      <p class="code-switcher javascript">
+        This tutorial shows how to make something in Javascript
+      </p>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="home-tab"
+            data-toggle="tab"
+            href="#home"
+            role="tab"
+            aria-controls="home"
+            aria-selected="true"
+            >Javascript</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="profile-tab"
+            data-toggle="tab"
+            href="#profile"
+            role="tab"
+            aria-controls="profile"
+            aria-selected="false"
+            >Python</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="contact-tab"
+            data-toggle="tab"
+            href="#contact"
+            role="tab"
+            aria-controls="contact"
+            aria-selected="false"
+            >Ruby</a
+          >
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="home"
+          role="tabpanel"
+          aria-labelledby="home-tab"
+        >
+          <pre><code class="javascript">
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+      </code></pre>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="profile"
+          role="tabpanel"
+          aria-labelledby="profile-tab"
+        >
+          <pre><code class="python">
+import fnmatch
+import os
+
+images = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff']
+matches = []
+
+for root, dirnames, filenames in os.walk("C:\"):
+    for extensions in images:
+        for filename in fnmatch.filter(filenames, extensions):
+            matches.append(os.path.join(root, filename))
+      </code></pre>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="contact"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+        >
+          <pre><code class="ruby">
+# Place the array in a random order.  Floyd's alg.
+def shuffle(arr)
+    for n in 0...arr.size
+        targ = n + rand(arr.size - n)
+        arr[n], arr[targ] = arr[targ], arr[n] if n != targ
+    end
+end
+
+# Make strange declarations.
+def pairs(a, b)
+    a << 'Insane'
+    shuffle(b)
+    b.each { |x| shuffle(a); a.each { |y| print y, " ", x, ".\n" } }
+end
+first = ['Strange', 'Fresh', 'Alarming']
+pairs(first, ['lemonade', 'procedure', 'sounds', 'throughway'])
+print "\n", first.join(" "), "\n"
+        </code></pre>
+        </div>
+      </div>
+
+      <p>
+        Praesent ac massa dui. Phasellus lobortis mi eu viverra volutpat. Ut
+        vestibulum, diam in interdum maximus, tellus purus facilisis tortor, non
+        eleifend eros massa id orci. In vel leo consectetur, vehicula risus et,
+        cursus mauris. Morbi quis est id nibh sodales gravida eget ut tortor.
+        Sed porta lorem in ante sodales, ut vulputate purus congue. Donec
+        pulvinar quis dui a porta. Nam eleifend pellentesque tortor. Maecenas
+        sed dolor vestibulum velit venenatis pulvinar interdum eget magna. Donec
+        nec nulla quis metus elementum interdum.
+      </p>
+      <p>
+        Aliquam porttitor risus a congue congue. Maecenas congue, augue nec
+        condimentum tempor, erat sapien ornare libero, sit amet malesuada nulla
+        dolor fermentum nibh. Suspendisse potenti. Nulla commodo erat vestibulum
+        ante lobortis, vel dapibus nisl molestie. Phasellus ut enim neque.
+        Suspendisse fermentum tristique nisl vel vulputate. Suspendisse quis
+        quam lorem. Donec et ultrices lacus. Donec massa libero, rhoncus in
+        scelerisque vitae, pulvinar ac massa. Maecenas in magna rutrum, mattis
+        nulla eu, molestie magna. Vestibulum hendrerit est pellentesque, euismod
+        justo et, rutrum sapien.
+      </p>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="code-switcher.js"></script>
+  </body>
+</html>

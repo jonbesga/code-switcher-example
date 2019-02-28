@@ -1,0 +1,13 @@
+{
+  "name": "code-switcher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jon Besga <jonan.bsg@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  },
+  "scripts": {
+    "start": "http-server"
+  }
+}
